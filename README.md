@@ -1,8 +1,12 @@
-https://classic.yarnpkg.com/en/
+### https://classic.yarnpkg.com/en/
 
-yarn global add json-server
-yarn add axios
-yarn add react-router-dom@6
-yarn add styled-components
-yarn add react-bootstrap bootstrap
-yarn add navlist
+1. yarn global add json-server
+2. yarn add axios
+3. yarn add react-router-dom@6
+4. yarn add styled-components
+5. yarn add react-bootstrap bootstrap
+6. yarn add navlist
+
+### Button
+
+https://v1.tailwindcss.com/components/buttons
