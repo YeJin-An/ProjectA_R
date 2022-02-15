@@ -14,10 +14,10 @@ export default function NoticeTable() {
               <th>작성일</th>
             </tr>
             <tr>
-              <th>1</th>
-              <th>Table cell</th>
-              <th>Table cell</th>
-              <th>Table cell</th>
+              <td>1</td>
+              <td>ddd</td>
+              <td>Table cell</td>
+              <td>Table cell</td>
             </tr>
           </tbody>
         </Table>
