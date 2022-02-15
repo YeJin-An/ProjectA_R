@@ -1,44 +1,22 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import useAxios from "axios-hooks";
 
 function NoticeList() {
-  const [users, setUsers] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [{ data, loading, error }, refetch] = useAxios(
+    {
+      url: "http://127.0.0.1:8000/notice/api/notices/",
+      method: "GET",
+    },
+    { manual: true }
+  );
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        setError(null);
-        setUsers(null);
-        setLoading(true);
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/users"
-        );
-        setUsers(response.data);
-      } catch (e) {
-        setError(e);
-      }
-      setLoading(false);
-    };
-    fetchUsers();
-  }, []);
-
-  if (loading) return <div>로딩중..</div>;
-  if (error) return <div>에러가 발생했습니다</div>;
-  if (!users) return null;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error!</p>;
 
   return (
-    <>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            {user.username}({user.name})
-          </li>
-        ))}
-      </ul>
-      <button onClick={fetchUsers}>다시 불러오기</button>
-    </>
+    <div>
+      <button onClick={refetch}>refatch</button>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
   );
 }
 
