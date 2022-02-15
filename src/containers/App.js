@@ -1,8 +1,7 @@
-import LoginForm from "components/accounts/LoginForm";
-import SignupForm from "components/accounts/SignupForm";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
-import PageUser from "pages/user/PageUser";
+import NoticeList from "components/notice/NoticeList";
+import NoticeTable from "components/notice/NoticeTable";
 import React, { Component } from "react";
 
 class App extends Component {
@@ -10,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <SignupForm />
+        <NoticeList />
         <Footer />
       </div>
     );
