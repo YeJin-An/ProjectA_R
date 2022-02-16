@@ -1,37 +1,34 @@
+import Button from "components/Button";
 import React from "react";
 import NoticeTable from "./NoticeTable";
 import NoticeTableColumn from "./NoticeTableColumn";
 import NoticeTableRow from "./NoticeTableRow";
 
-const NoticeList = (props) => {
+const NoticeList = ({ notice }) => {
   return (
     <>
-      <NoticeTable headerName={["번호", "제목", "작성자", "작성일"]}>
-        <NoticeTableRow>
+      <input
+        type="text"
+        name="search"
+        placeholder="검색"
+        className="p-1 bg-gray-100 focus:border focus:border-gray-400"
+      ></input>
+      <button onClick={""}>검색</button>
+
+      <NoticeTable headersName={["번호", "제목", "작성자", "작성일"]}>
+        <NoticeTableRow key={notice}>
           <NoticeTableColumn>1</NoticeTableColumn>
-          <NoticeTableColumn>첫번째 게시글입니다.</NoticeTableColumn>
-          <NoticeTableColumn>누구</NoticeTableColumn>
-          <NoticeTableColumn>2022-10-25</NoticeTableColumn>
+          <NoticeTableColumn>사랑</NoticeTableColumn>
+          <NoticeTableColumn>등록일</NoticeTableColumn>
+          <NoticeTableColumn>조회수</NoticeTableColumn>
+        </NoticeTableRow>
+        <NoticeTableRow key={notice}>
+          <NoticeTableColumn>2</NoticeTableColumn>
+          <NoticeTableColumn>좋아해</NoticeTableColumn>
+          <NoticeTableColumn>등록일</NoticeTableColumn>
+          <NoticeTableColumn>작성일</NoticeTableColumn>
         </NoticeTableRow>
       </NoticeTable>
-      <NoticeTableRow>
-        <NoticeTableColumn>2</NoticeTableColumn>
-        <NoticeTableColumn>두번째 게시글입니다.</NoticeTableColumn>
-        <NoticeTableColumn>누궁</NoticeTableColumn>
-        <NoticeTableColumn>2022-10-25</NoticeTableColumn>
-      </NoticeTableRow>
-      <NoticeTableRow>
-        <NoticeTableColumn>3</NoticeTableColumn>
-        <NoticeTableColumn>세번째 게시글입니다.</NoticeTableColumn>
-        <NoticeTableColumn>누굴</NoticeTableColumn>
-        <NoticeTableColumn>2022-10-25</NoticeTableColumn>
-      </NoticeTableRow>
-      <NoticeTableRow>
-        <NoticeTableColumn>4</NoticeTableColumn>
-        <NoticeTableColumn>네번째 게시글입니다.</NoticeTableColumn>
-        <NoticeTableColumn>누군</NoticeTableColumn>
-        <NoticeTableColumn>2022-10-25</NoticeTableColumn>
-      </NoticeTableRow>
     </>
   );
 };

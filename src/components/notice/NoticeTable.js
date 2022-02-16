@@ -9,13 +9,15 @@ const NoticeTable = (props) => {
       <thead>
         <tr>
           {headersName.map((item, index) => {
-            <td className="notice-table-header-column" key={index}>
-              {item}
-            </td>;
+            return (
+              <td className="notice-table-header-column" key={index}>
+                {item}
+              </td>
+            );
           })}
         </tr>
       </thead>
-      <body>{children}</body>
+      <tbody>{children}</tbody>
     </table>
   );
 };
