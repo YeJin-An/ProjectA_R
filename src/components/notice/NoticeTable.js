@@ -1,27 +1,23 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import "./NoticeTable.css";
 
-export default function NoticeTable() {
+const NoticeTable = (props) => {
+  const { headersName, children } = props;
+
   return (
-    <>
-      <div>
-        <Table>
-          <tbody>
-            <tr>
-              <th>번호</th>
-              <th>제목</th>
-              <th>작성자</th>
-              <th>작성일</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>ddd</td>
-              <td>Table cell</td>
-              <td>Table cell</td>
-            </tr>
-          </tbody>
-        </Table>
-      </div>
-    </>
+    <table className="notice-table">
+      <thead>
+        <tr>
+          {headersName.map((item, index) => {
+            <td className="notice-table-header-column" key={index}>
+              {item}
+            </td>;
+          })}
+        </tr>
+      </thead>
+      <body>{children}</body>
+    </table>
   );
-}
+};
+
+export default NoticeTable;
