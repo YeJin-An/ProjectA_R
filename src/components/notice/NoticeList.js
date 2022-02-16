@@ -1,23 +1,21 @@
-import useAxios from "axios-hooks";
+import axios from "axios";
 
 function NoticeList() {
-  const [{ data, loading, error }, refetch] = useAxios(
-    {
-      url: "http://127.0.0.1:8000/notice/api/notices/",
-      method: "GET",
-    },
-    { manual: true }
-  );
+  const token = document.getElementById("token");
+  const loginData = {
+    id: "",
+    title: "",
+    content: "",
+    created_at: "",
+    user: "",
+  };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error!</p>;
-
-  return (
-    <div>
-      <button onClick={refetch}>refatch</button>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
-  );
+  axios
+    .post("http://127.0.0.1:8000/notice/api/notices/", loginData)
+    .then((response) => {
+      console.log(response);
+      token.innerHTML = response.data.token;
+    });
 }
 
 export default NoticeList;

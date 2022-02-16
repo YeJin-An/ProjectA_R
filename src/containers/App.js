@@ -1,9 +1,6 @@
-import Base from "antd/lib/typography/Base";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
 import NoticeList from "components/notice/NoticeList";
-import NoticeTable from "components/notice/NoticeTable";
-import Hello from "containers/Hello";
 import React, { Component } from "react";
 
 class App extends Component {
@@ -11,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <Hello />
+        <NoticeList />
         <Footer />
       </div>
     );
