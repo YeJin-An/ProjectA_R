@@ -1,7 +1,6 @@
-import ActivateList from "components/activate/Activate";
+import Activate from "components/activate/Activate";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
-import NoticeList from "components/notice/NoticeList";
 import React, { Component } from "react";
 
 class App extends Component {
@@ -9,7 +8,7 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <ActivateList />
+        <Activate />
         <Footer />
       </div>
     );
