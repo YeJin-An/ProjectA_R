@@ -3,6 +3,7 @@ import Pagination from "components/Pagination";
 import NoticeTable from "./NoticeTable";
 import NoticeTableColumn from "./NoticeTableColumn";
 import NoticeTableRow from "./NoticeTableRow";
+import Button from "components/Button";
 
 const NoticeList = ({ notice }) => {
   return (
@@ -29,6 +30,7 @@ const NoticeList = ({ notice }) => {
           <NoticeTableColumn>작성일</NoticeTableColumn>
         </NoticeTableRow>
       </NoticeTable>
+      <Button />
       <Pagination />
     </>
   );

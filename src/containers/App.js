@@ -1,3 +1,4 @@
+import ActivateList from "components/activate/Activate";
 import Footer from "components/Footer";
 import Navigation from "components/Navigation";
 import NoticeList from "components/notice/NoticeList";
@@ -8,7 +9,7 @@ class App extends Component {
     return (
       <div>
         <Navigation />
-        <NoticeList />
+        <ActivateList />
         <Footer />
       </div>
     );
