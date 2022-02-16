@@ -1,5 +1,5 @@
-import Button from "components/Button";
 import React from "react";
+import Pagination from "components/Pagination";
 import NoticeTable from "./NoticeTable";
 import NoticeTableColumn from "./NoticeTableColumn";
 import NoticeTableRow from "./NoticeTableRow";
@@ -13,7 +13,7 @@ const NoticeList = ({ notice }) => {
         placeholder="검색"
         className="p-1 bg-gray-100 focus:border focus:border-gray-400"
       ></input>
-      <button onClick={""}>검색</button>
+      <button>검색</button>
 
       <NoticeTable headersName={["번호", "제목", "작성자", "작성일"]}>
         <NoticeTableRow key={notice}>
@@ -29,6 +29,7 @@ const NoticeList = ({ notice }) => {
           <NoticeTableColumn>작성일</NoticeTableColumn>
         </NoticeTableRow>
       </NoticeTable>
+      <Pagination />
     </>
   );
 };
