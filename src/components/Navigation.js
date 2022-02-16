@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Nav, NavItem } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link, Route, Routes } from "react-router-dom";
 
 export default class Navigation extends Component {
   render() {
@@ -23,6 +22,13 @@ export default class Navigation extends Component {
           <Link to="user/">
             <NavItem>회원가입</NavItem>
           </Link>
+
+          <Routes>
+            <Route path="/notice"></Route>
+            <Route path="/activate"></Route>
+            <Route path="/users"></Route>
+            <Route path="/user"></Route>
+          </Routes>
         </Nav>
       </div>
     );
