@@ -6,6 +6,8 @@
 4. yarn add styled-components
 5. yarn add react-bootstrap bootstrap
 6. yarn add navlist
+7. yarn add antd
+8. yarn add icons
 
 ### Button
 
