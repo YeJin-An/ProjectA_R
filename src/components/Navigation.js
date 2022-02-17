@@ -33,20 +33,4 @@ function Navigation() {
   );
 }
 
-function MyLink({ to, children }) {
-  return (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        baseClassName + ' ' + (isActive ? 'border-b-4 border-red-400' : '')
-      }
-    >
-      {children}
-    </NavLink>
-  );
-}
-
-const baseClassName =
-  'px-4 pt-3 pb-2 font-semibold hover:bg-yellow-200 hover:text-blank-500 hover:text-white';
-
 export default Navigation;
